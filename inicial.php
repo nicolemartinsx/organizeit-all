@@ -5,7 +5,7 @@
 </head>
 <body>
     <header>
-        <h1>Bem-vindo ao Meu Site de Avaliações de Cinema</h1>
+        <h1>Bem-vindo ao Site de Avaliações de Cinema</h1>
         <nav>
             <ul>
                 <li><a href="index.php">Início</a></li>
