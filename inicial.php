@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Meu Site de Avaliações de Cinema</title>
+    <title>Site de Avaliações de Cinema</title>
 </head>
 <body>
     <header>
