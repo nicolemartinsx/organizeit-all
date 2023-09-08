@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html html lang= "pt-br">
 <head>
     <title>Site de Avaliações de Cinema</title>
 </head>
