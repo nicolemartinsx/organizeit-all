@@ -1,1 +1,2 @@
 batata,batata@batata.com,1212
+Usuario1 ,usuario1@usuario1.com,senha1
