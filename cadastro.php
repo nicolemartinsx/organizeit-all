@@ -33,7 +33,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 ?>
 
 <!DOCTYPE html>
-<html>
+<<html lang= "pt-br">>
 <head>
     <title>Cadastro</title>
 </head>
