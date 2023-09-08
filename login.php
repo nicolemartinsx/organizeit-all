@@ -2,7 +2,7 @@
 session_start();
 
 if (isset($_SESSION["email"])) {
-    // Usuário já está logado, redirecionar para a página principal
+    // Usuario j esta logado, redirecionar para a pagina principal
     header("Location: principal.php");
     exit();
 }
@@ -11,7 +11,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $email = $_POST["email"];
     $senha = $_POST["senha"];
 
-    // Verificar os dados do usurio no arquivo "usuarios.txt"
+    // Verificar os dados do usuário no arquivo "usuarios.txt"
     $usuarios = file("usuarios.txt", FILE_IGNORE_NEW_LINES);
     foreach ($usuarios as $linha) {
         $dados = explode(",", $linha);
@@ -24,14 +24,15 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         }
     }
 
-    // Se não for encontrado um usuário correspondente, exibe uma mensagem de erro
+    // Se não for encontrado um usuario correspondente, exibe uma mensagem de erro
     echo "<p>Email ou senha incorretos.</p>";
 }
 ?>
 
 <!DOCTYPE html>
-<<html lang= "pt-br">>
+<html lang="pt">
 <head>
+    <meta charset="UTF-8">
     <title>Login</title>
 </head>
 <body>
@@ -48,5 +49,8 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
         <input type="submit" value="Entrar">
     </form>
+
+    <!-- Botão para redirecionar para a pagina de cadastro -->
+    <a href="cadastro.php">Novo Usuário</a>
 </body>
 </html>
