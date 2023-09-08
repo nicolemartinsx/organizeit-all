@@ -1,6 +1,7 @@
 <!DOCTYPE html>
-<html lang= "pt-br">
+<html lang= "pt">        
 <head>
+    <meta charset="UTF-8">
     <title>Site de Avaliações de Cinema</title>
 </head>
 <body>
@@ -19,7 +20,7 @@
         <h2>Filmes em Alta</h2>
         <div class="filmes-em-alta">
             <?php
-            // Exemplo de filmes em alta (dados estáticos)
+            // Exemplo de filmes em alta (dados estaticos)
             $filmes_em_alta = [
                 [
                     'titulo' => 'Filme 1',
