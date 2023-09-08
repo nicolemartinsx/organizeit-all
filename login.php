@@ -11,7 +11,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $email = $_POST["email"];
     $senha = $_POST["senha"];
 
-    // Verificar os dados do usuário no arquivo "usuarios.txt"
+    // Verificar os dados do usurio no arquivo "usuarios.txt"
     $usuarios = file("usuarios.txt", FILE_IGNORE_NEW_LINES);
     foreach ($usuarios as $linha) {
         $dados = explode(",", $linha);
@@ -37,7 +37,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 <body>
     <h1>Login</h1>
 
-    <!-- Formulário de login -->
+    <!-- Formulario de login -->
     <h2>Faça login</h2>
     <form method="post" action="">
         <label for="email">Email:</label>
