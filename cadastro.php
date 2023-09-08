@@ -2,7 +2,7 @@
 session_start();
 
 if (isset($_SESSION["email"])) {
-    // Usuário já está logado, redirecionar para a página principal
+    // Usuário ja está logado, redirecionar para pagina principal
     header("Location: principal.php");
     exit();
 }
@@ -33,14 +33,15 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 ?>
 
 <!DOCTYPE html>
-<<html lang= "pt-br">>
+<html lang="pt">
 <head>
+    <meta charset="UTF-8">
     <title>Cadastro</title>
 </head>
 <body>
     <h1>Cadastro</h1>
 
-    <!-- Formulário de cadastro -->
+    <!-- Formulario de cadastro -->
     <h2>Inscreva-se</h2>
     <form method="post" action="">
         <label for="nome">Nome:</label>
