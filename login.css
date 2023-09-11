@@ -1,0 +1,122 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100%;
+}
+
+h1 {
+  color: #ff7b01;
+  text-align: center;
+  font-family: Space Grotesk;
+  font-size: 25px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+}
+
+a {
+  color: #28849c;
+  font-family: Space Grotesk;
+  font-size: 25px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  text-decoration-line: underline;
+}
+
+html {
+  height: 100%;
+}
+
+.botaologin button {
+  background-color: transparent;
+  border: none;
+  width: 45px;
+  height: 45px;
+  position: absolute;
+  top: 7px;
+  right: 12px;
+}
+
+button {
+  cursor: pointer;
+}
+
+.container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #454545;
+  border-radius: 30px;
+  padding: 70px;
+  gap: 100px;
+}
+
+input {
+  width: 300px;
+  height: 60px;
+  border-radius: 50px;
+  background: #000;
+  border: none;
+  padding: 0 25px;
+  color: #ffff;
+  font-family: "Space Grotesk", sans-serif;
+  font-size: 18px;
+}
+
+.campos {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 20px;
+}
+
+form {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.logologin {
+  height: 400px;
+}
+
+.botaologin {
+  position: relative;
+}
+
+.cadastrar {
+  border-radius: 30px;
+  background: #ff7b01;
+  color: #000;
+  font-family: "Space Grotesk", sans-serif;
+  font-size: 20px;
+  font-weight: 500;
+  border: none;
+  padding: 8px 15px;
+}
+
+.cadastro {
+  flex-direction: column;
+}
+
+.logo {
+  width: 300px;
+}
+
+p {
+  color: #ff7b01;
+  font-family: "space grotesk", sans-serif;
+  font-size: 15px;
+}
