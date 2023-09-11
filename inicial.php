@@ -1,83 +1,129 @@
-<!DOCTYPE html>
-<html lang= "pt">        
-<head>
-    <meta charset="UTF-8">
-    <title>Site de Avaliações de Cinema</title>
-</head>
-<body>
-    <header>
-        <h1>Bem-vindo ao Site de Avaliações de Cinema</h1>
-        <nav>
-            <ul>
-                <li><a href="index.php">Início</a></li>
-                <li><a href="filmes_em_alta.php">Em Alta</a></li>
-                <li><a href="login.php">Login</a></li>
-            </ul>
-        </nav>
-    </header>
+<?php require('header.php'); ?>
+<main>
+    </br>
+    <div class="welcome">JUNTE-SE A NOSSA COMUNIDADE!</div>
 
-    <section>
-        <h2>Filmes em Alta</h2>
-        <div class="filmes-em-alta">
-            <?php
-            // Exemplo de filmes em alta (dados estaticos)
-            $filmes_em_alta = [
-                [
-                    'titulo' => 'Filme 1',
-                    'imagem' => 'imagem1.jpg',
-                ],
-                [
-                    'titulo' => 'Filme 2',
-                    'imagem' => 'imagem2.jpg',
-                ],
-                [
-                    'titulo' => 'Filme 3',
-                    'imagem' => 'imagem3.jpg',
-                ],
-            ];
+    <!-- Em alta -->
+    <div class="divisao">
+        em alta
+        <hr>
+    </div>
 
-            foreach ($filmes_em_alta as $filme) {
-                echo '<div class="filme">';
-                echo '<img src="' . $filme['imagem'] . '" alt="' . $filme['titulo'] . '">';
-                echo '<p>' . $filme['titulo'] . '</p>';
-                echo '</div>';
-            }
-            ?>
-        </div>
-    </section>
+    <div class="filmes">
+        <?php
+        // Exemplo de filmes em alta (dados estaticos)
+        $filmes_em_alta = [
+            [
+                'titulo' => 'Filme 1',
+                'capa' => 'imagens/1.jpg',
+            ],
+            [
+                'titulo' => 'Filme 2',
+                'capa' => 'imagens/2.jpg',
+            ],
+            [
+                'titulo' => 'Filme 3',
+                'capa' => 'imagens/3.jpg',
+            ],
+            [
+                'titulo' => 'Filme 4',
+                'capa' => 'imagens/4.jpg',
+            ],
+            [
+                'titulo' => 'Filme 5',
+                'capa' => 'imagens/5.jpg',
+            ],
+            [
+                'titulo' => 'Filme 6',
+                'capa' => 'imagens/6.jpg',
+            ],
+        ];
 
-    <section>
-        <h2>Novas Avaliações</h2>
-        <div class="novas-avaliacoes">
-            <?php
-            // Exemplo de novas avaliações de filmes (dados estáticos)
-            $novas_avaliacoes = [
-                [
-                    'titulo' => 'Avaliação 1',
-                    'descricao' => 'Ótimo filme!',
-                ],
-                [
-                    'titulo' => 'Avaliação 2',
-                    'descricao' => 'Um clássico imperdível.',
-                ],
-                [
-                    'titulo' => 'Avaliação 3',
-                    'descricao' => 'Surpreendente!',
-                ],
-            ];
+        foreach ($filmes_em_alta as $filme) {
+        ?>
+            <a href="pagina_filme.php?filme=<?= urlencode($filme['titulo']) ?>">
+                <img src=<?= $filme['capa'] ?> class="capa" alt=<?= $filme['titulo'] ?>>
+            </a>
+        <?php
+        }
+        ?>
+    </div>
 
-            foreach ($novas_avaliacoes as $avaliacao) {
-                echo '<div class="avaliacao">';
-                echo '<h3>' . $avaliacao['titulo'] . '</h3>';
-                echo '<p>' . $avaliacao['descricao'] . '</p>';
-                echo '</div>';
-            }
-            ?>
-        </div>
-    </section>
+    <div class="bvermais">
+        <a href="emalta.php">ver mais</a>
+    </div>
 
-    <footer>
-        <p>&copy; <?php echo date('Y'); ?> Meu Site de Avaliações de Cinema</p>
-    </footer>
+    <!-- Reviews -->
+    <div class=" divisao">
+        novas reviews
+        <hr>
+    </div>
+
+    <div class="tabelareviews">
+        <?php
+        $novas_avaliacoes = [
+            [
+                'autor' => 'Autor da Review',
+                'capa' => 'imagens/1.jpg',
+                'titulo' => 'Minha avaliação',
+                'estrelas' => 4,
+                'descricao' => 'Ótimo filme!',
+            ],
+            [
+                'autor' => 'Autor da Review',
+                'capa' => 'imagens/2.jpg',
+                'titulo' => 'Minha avaliação 1',
+                'estrelas' => 5,
+                'descricao' => 'Um clássico imperdível.',
+            ],
+            [
+                'autor' => 'Autor da Review',
+                'capa' => 'imagens/3.jpg',
+                'titulo' => 'Minha avaliação 2',
+                'estrelas' => 3,
+                'descricao' => 'Não curti',
+            ],
+        ];
+
+        foreach ($novas_avaliacoes as $avaliacao) {
+        ?>
+            <div class="review">
+                <img src=<?= "$avaliacao[capa]" ?> class="capa" alt="Filme 1">
+                <div class="info">
+
+                    <?= $avaliacao['autor'] ?>
+                    <div class="titulo"><?= $avaliacao['titulo'] ?></div>
+                    <div class="estrela">
+                        <?php
+                        for ($i = 0; $i < $avaliacao['estrelas']; $i++) {
+                            echo '<img src="imagens/estrela.png" />';
+                        }
+                        for ($i = 0; $i < 5 - $avaliacao['estrelas']; $i++) {
+                            echo '<img src="imagens/estrela_outline.png">';
+                        }
+                        ?>
+                    </div>
+                    <div class="texto"><img src="imagens/quote.png" class="icone" />
+                        <?= $avaliacao['descricao'] ?>
+                    </div>
+                </div>
+            </div>
+        <?php
+        }
+        ?>
+    </div>
+
+</main>
+<!-- Footer -->
+<footer>
+    <div>
+        <a>Sobre nós </a>
+        <a>Contato </a>
+        <a>Termos de uso</a>
+    </div>
+    <span>Criado por Celson, Matheus e Nicole <br> 2023</span>
+</footer>
+
 </body>
+
 </html>
