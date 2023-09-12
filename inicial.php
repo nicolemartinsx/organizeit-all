@@ -12,34 +12,9 @@
     <div class="filmes">
         <?php
         // Exemplo de filmes em alta (dados estaticos)
-        $filmes_em_alta = [
-            [
-                'titulo' => 'Filme 1',
-                'capa' => 'imagens/1.jpg',
-            ],
-            [
-                'titulo' => 'Filme 2',
-                'capa' => 'imagens/2.jpg',
-            ],
-            [
-                'titulo' => 'Filme 3',
-                'capa' => 'imagens/3.jpg',
-            ],
-            [
-                'titulo' => 'Filme 4',
-                'capa' => 'imagens/4.jpg',
-            ],
-            [
-                'titulo' => 'Filme 5',
-                'capa' => 'imagens/5.jpg',
-            ],
-            [
-                'titulo' => 'Filme 6',
-                'capa' => 'imagens/6.jpg',
-            ],
-        ];
+        require('data.php');
 
-        foreach ($filmes_em_alta as $filme) {
+        foreach ($filmes as $filme) {
         ?>
             <a href="pagina_filme.php?filme=<?= urlencode($filme['titulo']) ?>">
                 <img src=<?= $filme['capa'] ?> class="capa" alt=<?= $filme['titulo'] ?>>

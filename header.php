@@ -26,7 +26,7 @@
 
                 <!-- Botões -->
                 <a class="headerbutton" href="inicial.php">INICIO</a>
-                <a class="headerbutton" href="emalta.php">EM ALTA</a>
+                <a class="headerbutton" href="pesquisa.php">EM ALTA</a>
 
                 <?php
                 session_start();

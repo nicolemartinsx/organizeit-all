@@ -96,6 +96,7 @@ body {
 button {
   background: transparent;
   border: none;
+  cursor: pointer;
 }
 
 main {
@@ -122,7 +123,7 @@ main {
 }
 
 hr {
-  margin-top: 0px;
+  margin-top: 5px;
   margin-bottom: 40px;
   height: 2px;
   border: none;
@@ -149,7 +150,8 @@ hr {
   margin-top: 10px;
 }
 
-.bvermais a {
+.bvermais a,
+.btfiltrar {
   background-color: #28849c;
   border-radius: 25px;
   padding: 5px 10px;
@@ -182,10 +184,17 @@ hr {
   align-items: flex-start;
 }
 
-.review .estrela {
-  width: 20px;
+.estrela {
   display: flex;
-  gap: 5px;
+  gap: 3px;
+}
+
+.filmecontainer {
+  display: flex;
+  gap: 8px;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 }
 
 .review .icone {
@@ -238,7 +247,6 @@ footer {
   padding: 10px;
   font-size: 20px;
   border: none;
-  cursor: pointer;
 }
 
 .dropdown-content {
@@ -277,6 +285,22 @@ footer {
 .droplink:hover {
   background-color: #000;
   color: #fff;
+}
+
+select {
+  flex-shrink: 0;
+  cursor: pointer;
+  background-color: #242424;
+  color: #fff;
+  border: none;
+  font-family: "Signika", sans-serif;
+  font-size: 20px;
+  padding: 5px;
+}
+
+.sortby {
+  display: flex;
+  gap: 40px;
 }
 
 footer a {
