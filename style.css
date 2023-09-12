@@ -45,16 +45,23 @@ body {
 .alinhamentoheader {
   display: flex;
   align-items: center;
+  gap: 20px;
 }
 
 /* Botões Header*/
 .headerbutton {
   border: none;
-  padding: 10px 20px;
+  padding: 10px 10px;
   margin-left: 10px;
   cursor: pointer;
   font-family: "Signika", sans-serif;
   font-size: 20px;
+}
+
+.headerbutton:hover {
+  background-color: #ff7b01;
+  color: #000;
+  border-radius: 30px;
 }
 
 .login {
@@ -216,6 +223,59 @@ footer {
   font-weight: 300;
   text-align: center;
   font-size: 13px;
+  color: #fff;
+}
+
+.dropdown {
+  position: relative;
+}
+
+.dropbtn {
+  color: #ff7b01;
+  font-family: "Signika", sans-serif;
+  text-decoration: underline;
+  text-transform: uppercase;
+  padding: 10px;
+  font-size: 20px;
+  border: none;
+  cursor: pointer;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #000;
+  z-index: 1;
+  width: 100px;
+  text-align: center;
+  right: 0px;
+}
+
+.dropdown:hover .dropbtn {
+  background-color: #ff7b01;
+  color: #000;
+  border-radius: 30px;
+}
+
+.dropdown:hover .dropdown-content {
+  display: flex;
+  flex-direction: column;
+  border-radius: 15px;
+  background-color: #454545;
+  overflow: hidden;
+}
+
+.droplink {
+  padding: 10px;
+  text-transform: uppercase;
+  color: #ff7b01;
+  text-decoration: none;
+  font-size: 18px;
+  font-family: "Signika", sans-serif;
+}
+
+.droplink:hover {
+  background-color: #000;
   color: #fff;
 }
 

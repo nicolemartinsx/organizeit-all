@@ -27,7 +27,26 @@
                 <!-- Botões -->
                 <a class="headerbutton" href="inicial.php">INICIO</a>
                 <a class="headerbutton" href="emalta.php">EM ALTA</a>
-                <a class="headerbutton login" href="login.php">LOGIN</a>
+
+                <?php
+                session_start();
+
+                if (isset($_SESSION["email"])) {
+                    // Usuario ja esta logado, redirecionar para a pagina principal 
+                ?>
+                    <a class="headerbutton" href="watchlist.php">WATCHLIST</a>
+                    <div class="dropdown">
+                        <button class="dropbtn"><?php echo $_SESSION["nome"]; ?></button>
+                        <div class="dropdown-content">
+                            <a class="droplink" href="perfil.php">Perfil</a>
+                            <a class="droplink" href="logout.php">Sair</a>
+                        </div>
+                    </div>
+                <?php
+                } else {
+                ?>
+                    <a class="headerbutton login" href="login.php">LOGIN</a>
+                <?php } ?>
             </div>
         </div>
     </header>

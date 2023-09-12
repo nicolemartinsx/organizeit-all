@@ -32,7 +32,7 @@
 
                 if (isset($_SESSION["email"])) {
                     // Usuario ja esta logado, redirecionar para a pagina principal
-                    header("Location: principal.php");
+                    header("Location: inicial.php");
                     exit();
                 }
 
@@ -47,9 +47,7 @@
                         if ($dados[1] == $email && $dados[2] == $senha) {
                             $_SESSION["email"] = $email;
                             $_SESSION["nome"] = $dados[0];
-                            echo "<p>Login bem-sucedido como $email. Redirecionando para a página principal...</p>";
-                            echo "<meta http-equiv='refresh' content='2;url=principal.php'>"; // Redireciona após 2 segundos
-                            break;
+                            header("Location: inicial.php");
                         }
                     }
 
