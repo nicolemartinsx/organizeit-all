@@ -70,6 +70,56 @@ body {
   border-radius: 30px;
 }
 
+h1 {
+  font-family: "Signika", sans-serif;
+  font-size: 35px;
+  color: #fff;
+}
+
+h2 {
+  font-family: "Space Grotesk", sans-serif;
+  font-size: 20px;
+  color: #28849c;
+  text-transform: uppercase;
+}
+
+h3 {
+  font-family: "Space Grotesk", sans-serif;
+  font-size: 18px;
+  color: #fff;
+}
+
+.filmedetalhes h3 {
+  width: 300px;
+}
+
+.filmecontainer2 {
+  display: flex;
+  gap: 20px;
+  justify-content: space-between;
+  width: 1200px;
+}
+
+.containerfilme {
+  display: flex;
+  gap: 20px;
+}
+
+.avaliar {
+  border: 1px dashed #ff7b01;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 50px;
+}
+
+.pagfilme {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
 /* Campo de pesquisa */
 .pesquisa-input {
   background-color: #000;
@@ -120,6 +170,7 @@ main {
   font-style: normal;
   font-weight: 500;
   margin-top: 20px;
+  width: 100%;
 }
 
 hr {
@@ -143,6 +194,23 @@ hr {
   height: 250px;
 }
 
+.capafilme {
+  width: 234px;
+  height: 350px;
+}
+
+.filmedetalhes {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  align-items: flex-start;
+}
+
+.comentario {
+  display: flex;
+  gap: 5px;
+}
+
 /* Botão ver mais */
 .bvermais {
   display: flex;
@@ -159,6 +227,17 @@ hr {
   color: #fff;
   font-family: "Space Grotesk", sans-serif;
   font-size: 20px;
+}
+
+.btwatchlist {
+  background-color: #ff7b01;
+  border-radius: 25px;
+  padding: 5px 10px;
+  text-decoration: none;
+  color: #fff;
+  font-family: "Space Grotesk", sans-serif;
+  font-size: 20px;
+  margin-top: 90px;
 }
 
 /* Reviews */
@@ -296,6 +375,20 @@ select {
   font-family: "Signika", sans-serif;
   font-size: 20px;
   padding: 5px;
+}
+
+input,
+textarea {
+  flex-shrink: 0;
+  cursor: pointer;
+  background-color: #242424;
+  color: #fff;
+  border: none;
+  font-family: "Signika", sans-serif;
+  font-size: 20px;
+  padding: 5px;
+  border: #fff 1px solid;
+  border-radius: 10px;
 }
 
 .sortby {
