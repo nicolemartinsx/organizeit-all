@@ -18,4 +18,4 @@ Celson: Reviews do perfil logado, watchlist, favoritos(removido na versão atual
 
 
 Método de instalação:
-Com o Apache ativado (no Xampp, por exemplo), adicione o arquivo  “ProjetoWeb” na pasta “htdocs” e mantenha-o com o nome “ProjetoWeb”. Entrar em um navegador e na barra de pesquisa colocar “localhost/ProjetoWeb/”, e apertar enter.
+Com o Apache ativado (no Xampp, por exemplo), adicione o arquivo  “Projeto-Web-main” na pasta “htdocs” e mantenha-o com o nome “Projeto-Web-main”. Entrar em um navegador e na barra de pesquisa colocar “localhost/Projeto-Web-main/”, e apertar enter.
