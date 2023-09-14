@@ -3,7 +3,7 @@
 Funcionalidades faltantes: 
 Funcionalidades dependentes de banco de dados: 
 como adição de filmes, edição de reviews.
-Conexão com uma Api de filmes como Rotten Tomatoes
+Conexão com uma Api de filmes (exemplo: Rotten Tomatoes)
 Interação entre usuários na forma de seguidores.
 Criação de lista de filmes. 
 
