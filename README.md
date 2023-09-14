@@ -1,8 +1,7 @@
 # Projeto-Web
 
 Funcionalidades faltantes: 
-Funcionalidades dependentes de banco de dados: 
-como adição de filmes, edição de reviews.
+Funcionalidades dependentes de banco de dados: por exemplo adição de filmes e edição de reviews.
 Conexão com uma Api de filmes (exemplo: Rotten Tomatoes)
 Interação entre usuários na forma de seguidores.
 Criação de lista de filmes. 
