@@ -1,4 +1,6 @@
 # Projeto-Web
+Celson Bernardo Andrade Caetano Junior Ra:2257815  
+Nicole Mayara Martins Ra:2259630
 
 Funcionalidades faltantes: 
 Funcionalidades dependentes de banco de dados, como: adição de filmes e edição de reviews.
