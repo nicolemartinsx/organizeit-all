@@ -9,11 +9,21 @@ require("header.view.php");
 
         // Verifica se o título do filme foi passado na URL
         if (isset($_GET["watchlist"])) {
+            $watchlist = file_exists("../models/dados/watchlist.txt") ? file("../models/dados/watchlist.txt", FILE_IGNORE_NEW_LINES) : [];
             if ($_GET["watchlist"] == 1) {
-                $watchlist = $_SESSION["nome"] . ',' . $titulo;
-                file_put_contents("../models/dados/watchlist.txt", $watchlist . PHP_EOL, FILE_APPEND);
+                $encontrou = false;
+                foreach ($watchlist as $linha) {
+                    $dados = explode(",", $linha);
+                    if ($dados[0] == $_SESSION['nome'] && $dados[1] == $titulo) {
+                        $encontrou = true;
+                        break;
+                    }
+                }
+                if ($encontrou == false) {
+                    $novo = $_SESSION["nome"] . ',' . $titulo;
+                    file_put_contents("../models/dados/watchlist.txt", $novo . PHP_EOL, FILE_APPEND);
+                }
             } else {
-                $watchlist = file("../models/dados/watchlist.txt", FILE_IGNORE_NEW_LINES);
                 $novo = [];
                 foreach ($watchlist as $linha) {
                     $dados = explode(",", $linha);
@@ -25,7 +35,6 @@ require("header.view.php");
                 file_put_contents("../models/dados/watchlist.txt", $novo);
             }
         }
-
 
         // Verifica se o filme existe no array
         if (array_key_exists($titulo, $filmes)) {
@@ -92,6 +101,7 @@ require("header.view.php");
                         break;
                     }
                 }
+                //Verifica se o filme já está na watchlist
                 if ($encontrou == true) {
                     echo '<a class="btwatchlist" href="../controllers/filme.controller.php?filme=' . urlencode($filme['titulo']) . '&watchlist=0">remover da watchlist</a>';
                 } else {

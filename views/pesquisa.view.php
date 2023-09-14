@@ -56,7 +56,7 @@ function opcaoSelecionada($campo, $valor)
                 }
             ?>
                 <a class="filmecontainer" href="../controllers/filme.controller.php?filme=<?= urlencode($filme['titulo']) ?>">
-                    <img src=<?= $base_url . $filme['capa'] ?> class="capa" alt=<?= $filme['titulo'] ?>>
+                    <img src=<?= $base_url . '/' . $filme['capa'] ?> class="capa" alt=<?= $filme['titulo'] ?>>
                     <div class="estrela">
                         <?php
                         for ($i = 0; $i < $filme['estrelas']; $i++) {

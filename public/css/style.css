@@ -173,6 +173,16 @@ main {
   width: 100%;
 }
 
+.divisao a {
+  color: #28849c;
+  margin-right: 50px;
+}
+
+.divisao .ativo {
+  color: #ff7b01;
+  border-bottom: 3px solid #ff7b01;
+}
+
 hr {
   margin-top: 5px;
   margin-bottom: 40px;

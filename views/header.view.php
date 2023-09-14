@@ -1,5 +1,5 @@
 <?php
-$base_url = "http://localhost/ProjetoWeb/";
+$base_url = "http://localhost/ProjetoWeb";
 ?>
 <!DOCTYPE html>
 <html lang="pt-br">
@@ -22,7 +22,7 @@ $base_url = "http://localhost/ProjetoWeb/";
 
             <div class="alinhamentoheader">
                 <!-- Campo de pesquisa -->
-                <form class="pesquisa" method="GET" action="pesquisa.php">
+                <form class="pesquisa" method="GET" action="<?= $base_url ?>/controllers/pesquisa.controller.php">
                     <input name="q" type="text" class="pesquisa-input" placeholder="Pesquisar...">
                     <button type="submit"><img src="<?= $base_url ?>/public/imagens/pesquisar.png" alt="Lupa" width="25"></button>
                 </form>
@@ -37,12 +37,12 @@ $base_url = "http://localhost/ProjetoWeb/";
                 if (isset($_SESSION["email"])) {
                     // Usuario ja esta logado, redirecionar para a pagina principal 
                 ?>
-                    <a class="headerbutton" href="<?= $base_url ?>/controllers/watchlist.controoler.php">WATCHLIST</a>
+                    <a class="headerbutton" href="<?= $base_url ?>/controllers/watchlist.controller.php">WATCHLIST</a>
                     <div class="dropdown">
                         <button class="dropbtn"><?php echo $_SESSION["nome"]; ?></button>
                         <div class="dropdown-content">
                             <a class="droplink" href="<?= $base_url ?>/controllers/perfil.controller.php">Perfil</a>
-                            <a class="droplink" href="<?= $base_url ?>views/logout.view.php">Sair</a>
+                            <a class="droplink" href="<?= $base_url ?>/views/logout.view.php">Sair</a>
                         </div>
                     </div>
                 <?php
