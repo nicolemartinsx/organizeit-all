@@ -1,5 +1,5 @@
 <?php
-$base_url = "http://localhost/ProjetoWeb";
+$base_url = "http://localhost/Projeto-Web-main";
 ?>
 <!DOCTYPE html>
 <html lang="pt-br">
