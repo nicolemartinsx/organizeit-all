@@ -1,0 +1,66 @@
+
+
+.link{
+    margin-top: 5px;
+    margin-bottom: 40px;
+    height: 2px;
+    border: none;
+
+  }
+  .nome{
+    color:white;
+    margin-left: 20px;
+    font-family: "Signika", sans-serif;
+    margin-top: 40px;
+}
+  .div-nome{
+    margin-top: 15px;
+    
+
+  }
+  .divisao p{
+    display: inline-block;
+    color: #28849c;
+  }
+  
+.escrita-link{
+  color: yellow;
+}
+
+  
+.div-imagens{
+  display: inline-block;
+  background-color: white;
+  border-radius: 25px;
+  
+  
+}
+.review-texto{
+
+  display: inline-block;
+  text-align: center;
+}
+.links{
+  margin-top: 20px;
+  border-width: 100%;
+  background-color: paleturquoise;
+}
+.texto{
+  text-align: left;
+}
+
+footer {
+  margin-top: 50px;
+  width: 100%;
+  gap: 35px;
+  padding: 30px;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  background-color: #000;
+  font-family: "Space Grotesk", sans-serif;
+  font-weight: 300;
+  text-align: center;
+  font-size: 13px;
+  color: #fff;
+}
