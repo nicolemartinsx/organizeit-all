@@ -1,5 +1,0 @@
-batata,batata@batata.com,1212
-Usuario1 ,usuario1@usuario1.com,senha1
-MATHEUS SCHEIBEL PEREIRA,matheusscheibel1@gmail.com,122548
-Usuario2,usuario2@example.com,1212
-usuario3,usuario3@exemplo,1212

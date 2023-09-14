@@ -1,6 +1,6 @@
 <?php
-require('header.php');
-require('data.php');
+require('../views/header.view.php');
+require('../models/filmes.model.php');
 
 function opcaoSelecionada($campo, $valor)
 {
@@ -55,15 +55,15 @@ function opcaoSelecionada($campo, $valor)
                     continue;
                 }
             ?>
-                <a class="filmecontainer" href="pagina_filme.php?filme=<?= urlencode($filme['titulo']) ?>">
-                    <img src=<?= $filme['capa'] ?> class="capa" alt=<?= $filme['titulo'] ?>>
+                <a class="filmecontainer" href="../controllers/filme.controller.php?filme=<?= urlencode($filme['titulo']) ?>">
+                    <img src=<?= $base_url . $filme['capa'] ?> class="capa" alt=<?= $filme['titulo'] ?>>
                     <div class="estrela">
                         <?php
                         for ($i = 0; $i < $filme['estrelas']; $i++) {
-                            echo '<img src="imagens/estrela.png" />';
+                            echo '<img src="../public/imagens/estrela.png" />';
                         }
                         for ($i = 0; $i < 5 - $filme['estrelas']; $i++) {
-                            echo '<img src="imagens/estrela_outline.png">';
+                            echo '<img src="../public/imagens/estrela_outline.png">';
                         }
                         ?>
                     </div>

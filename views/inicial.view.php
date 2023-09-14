@@ -1,4 +1,4 @@
-<?php require('header.php'); ?>
+<?php require('header.view.php'); ?>
 <main>
     </br>
     <div class="welcome">JUNTE-SE A NOSSA COMUNIDADE!</div>
@@ -12,11 +12,11 @@
     <div class="filmes">
         <?php
         // Exemplo de filmes em alta (dados estaticos)
-        require('data.php');
+        require('models/filmes.model.php');
 
         foreach ($filmes as $filme) {
         ?>
-            <a href="pagina_filme.php?filme=<?= urlencode($filme['titulo']) ?>">
+            <a href="controllers/filme.controller.php?filme=<?= urlencode($filme['titulo']) ?>">
                 <img src=<?= $filme['capa'] ?> class="capa" alt=<?= $filme['titulo'] ?>>
             </a>
         <?php
@@ -25,7 +25,7 @@
     </div>
 
     <div class="bvermais">
-        <a href="emalta.php">ver mais</a>
+        <a href="controllers/pesquisa.controller.php">ver mais</a>
     </div>
 
     <!-- Reviews -->
@@ -35,31 +35,8 @@
     </div>
 
     <div class="tabelareviews">
-        <?php
-        $novas_avaliacoes = [
-            [
-                'autor' => 'Autor da Review',
-                'capa' => 'imagens/1.jpg',
-                'titulo' => 'Minha avaliação',
-                'estrelas' => 4,
-                'descricao' => 'Ótimo filme!',
-            ],
-            [
-                'autor' => 'Autor da Review',
-                'capa' => 'imagens/2.jpg',
-                'titulo' => 'Minha avaliação 1',
-                'estrelas' => 5,
-                'descricao' => 'Um clássico imperdível.',
-            ],
-            [
-                'autor' => 'Autor da Review',
-                'capa' => 'imagens/3.jpg',
-                'titulo' => 'Minha avaliação 2',
-                'estrelas' => 3,
-                'descricao' => 'Não curti',
-            ],
-        ];
 
+        <?php
         foreach ($novas_avaliacoes as $avaliacao) {
         ?>
             <div class="review">
@@ -71,14 +48,14 @@
                     <div class="estrela">
                         <?php
                         for ($i = 0; $i < $avaliacao['estrelas']; $i++) {
-                            echo '<img src="imagens/estrela.png" />';
+                            echo '<img src="public/imagens/estrela.png" />';
                         }
                         for ($i = 0; $i < 5 - $avaliacao['estrelas']; $i++) {
-                            echo '<img src="imagens/estrela_outline.png">';
+                            echo '<img src="public/imagens/estrela_outline.png">';
                         }
                         ?>
                     </div>
-                    <div class="texto"><img src="imagens/quote.png" class="icone" />
+                    <div class="texto"><img src="public/imagens/quote.png" class="icone" />
                         <?= $avaliacao['descricao'] ?>
                     </div>
                 </div>
