@@ -1,4 +1,4 @@
-<?php require('header.view.php');
+<?php require('header.php');
 
 if (isset($_GET["filme"]) && isset($_GET["watchlist"])) {
     $watchlist = file_exists("../models/dados/watchlist.txt") ? file("../models/dados/watchlist.txt", FILE_IGNORE_NEW_LINES) : [];
@@ -80,13 +80,4 @@ if (isset($_GET["filme"]) && isset($_GET["watchlist"])) {
 
 
     </main>
-
-    <footer>
-        <div>
-            <a>Sobre nós </a>
-            <a>Contato </a>
-            <a>Termos de uso</a>
-        </div>
-        <span>Criado por Celson, Matheus e Nicole <br> 2023</span>
-    </footer>
 </body>

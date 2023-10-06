@@ -1,4 +1,4 @@
-<?php require('header.view.php');
+<?php require('header.php');
 require('../models/filme.model.php'); ?>
 
 <body>
@@ -50,13 +50,4 @@ require('../models/filme.model.php'); ?>
             </div>
         </div>
     </main>
-
-    <footer>
-        <div>
-            <a>Sobre nós </a>
-            <a>Contato </a>
-            <a>Termos de uso</a>
-        </div>
-        <span>Criado por Celson, Matheus e Nicole <br> 2023</span>
-    </footer>
 </body>

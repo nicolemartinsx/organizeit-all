@@ -1,5 +1,5 @@
 <?php
-require('../views/header.view.php');
+require('../views/header.php');
 require('../models/filmes.model.php');
 
 function opcaoSelecionada($campo, $valor)
@@ -73,15 +73,6 @@ function opcaoSelecionada($campo, $valor)
             ?>
         </div>
     </main>
-    <!-- Footer -->
-    <footer>
-        <div>
-            <a>Sobre nós </a>
-            <a>Contato </a>
-            <a>Termos de uso</a>
-        </div>
-        <span>Criado por Celson, Matheus e Nicole <br> 2023</span>
-    </footer>
 </body>
 
 

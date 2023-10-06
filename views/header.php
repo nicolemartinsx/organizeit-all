@@ -33,6 +33,11 @@ $base_url = "http://localhost/Projeto-Web-main";
 
                 <?php
                 session_start();
+                if (isset($_SESSION["adm"]) && $_SESSION['adm'] == '1') {
+                ?>
+                    <a class="headerbutton" href="<?= $base_url ?>/controllers/cadastrofilme.controller.php">CADASTRAR</a>
+                <?php
+                }
 
                 if (isset($_SESSION["email"])) {
                     // Usuario ja esta logado, redirecionar para a pagina principal 
@@ -42,7 +47,7 @@ $base_url = "http://localhost/Projeto-Web-main";
                         <button class="dropbtn"><?php echo $_SESSION["nome"]; ?></button>
                         <div class="dropdown-content">
                             <a class="droplink" href="<?= $base_url ?>/controllers/perfil.controller.php">Perfil</a>
-                            <a class="droplink" href="<?= $base_url ?>/views/logout.view.php">Sair</a>
+                            <a class="droplink" href="<?= $base_url ?>/controllers/logout.controller.php">Sair</a>
                         </div>
                     </div>
                 <?php
