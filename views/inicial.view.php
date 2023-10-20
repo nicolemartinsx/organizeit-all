@@ -5,22 +5,19 @@
 
     <!-- Em alta -->
     <div class="divisao">
-        em alta
+        recentes
         <hr>
     </div>
 
     <div class="filmes">
         <?php
-        // Exemplo de filmes em alta (dados estaticos)
-        require('models/filmes.model.php');
-
-        foreach ($filmes as $filme) {
+        foreach ($filmes as $filme) :
         ?>
-            <a href="controllers/filme.controller.php?filme=<?= urlencode($filme['titulo']) ?>">
-                <img src=<?= $filme['capa'] ?> class="capa" alt=<?= $filme['titulo'] ?>>
+            <a href="controllers/filme.controller.php?id=<?= urlencode($filme->id) ?>">
+                <img src="<?= 'data:image/jpeg;base64,' . base64_encode($filme->capa) ?>" class="capa" alt=<?= $filme->titulo ?>>
             </a>
         <?php
-        }
+        endforeach;
         ?>
     </div>
 
@@ -37,6 +34,7 @@
     <div class="tabelareviews">
 
         <?php
+        require('models/inicial.model.php');
         foreach ($novas_avaliacoes as $avaliacao) {
         ?>
             <div class="review">
@@ -68,7 +66,13 @@
 
 </main>
 
-<?php require 'footer.php'; ?>
+<?php require('footer.php');
+
+if (isset($_GET['sucesso'])) {
+    echo "<script> alert('" . $_GET['sucesso'] . "');</script>";
+}
+
+?>
 
 </body>
 

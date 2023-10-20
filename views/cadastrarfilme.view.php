@@ -8,7 +8,7 @@
             <hr>
         </div>
 
-        <form class="formcadastrofilme" method="post" action="" enctype="multipart/form-data">
+        <form class="formcadastrarfilme" method="post" action="" enctype="multipart/form-data">
 
             <div class="containercadastrarfilme">
                 <div class="containerinput">
@@ -35,7 +35,12 @@
 
 </main>
 
-<?php require 'footer.php'; ?>
+<?php require 'footer.php';
+
+if (isset($_GET['erro'])) {
+    echo "<script> alert('" . $_GET['erro'] . "');</script>";
+}
+?>
 
 <script>
     const input = document.querySelector('input[name="capa"]');
