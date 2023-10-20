@@ -389,7 +389,7 @@ textarea {
   gap: 40px;
 }
 
-.formcadastrofilme {
+.formcadastrarfilme {
   display: flex;
   flex-direction: column;
   align-items: center;

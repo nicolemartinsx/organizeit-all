@@ -30,7 +30,7 @@
             </form>
 
             <!-- Botão para redirecionar para a pagina de cadastro -->
-            <a href="../controllers/cadastro.controller.php">cadastre-se</a>
+            <a href="../controllers/cadastraruser.controller.php">cadastre-se</a>
         </div>
     </div>
 </body>

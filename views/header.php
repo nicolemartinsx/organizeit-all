@@ -1,5 +1,5 @@
 <?php
-$base_url = "http://localhost/Projeto-Web-main";
+$base_url = "http://projeto-web.test";
 ?>
 <!DOCTYPE html>
 <html lang="pt-br">
@@ -12,6 +12,7 @@ $base_url = "http://localhost/Projeto-Web-main";
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Signika:wght@300;400;500;600;700&family=Space+Grotesk:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="icon" href="<?= $base_url ?>/public/imagens/favicon.ico" type="image/x-icon">
 </head>
 
 <body>
@@ -35,7 +36,7 @@ $base_url = "http://localhost/Projeto-Web-main";
                 session_start();
                 if (isset($_SESSION["adm"]) && $_SESSION['adm'] == '1') {
                 ?>
-                    <a class="headerbutton" href="<?= $base_url ?>/controllers/cadastrofilme.controller.php">CADASTRAR</a>
+                    <a class="headerbutton" href="<?= $base_url ?>/controllers/cadastrarfilme.controller.php">CADASTRAR</a>
                 <?php
                 }
 
