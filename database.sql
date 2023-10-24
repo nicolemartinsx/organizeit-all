@@ -16,3 +16,12 @@ email varchar(50) NOT NULL,
 senha varchar(50) NOT NULL,
 PRIMARY KEY (`id`)
 )
+
+
+CREATE TABLE watchlist(
+idUsuarios int(11) NOT NULL,	
+idFilmes int(11) NOT NULL,
+FOREIGN KEY (idUsuarios) REFERENCES usuarios(id),
+FOREIGN KEY (idFilmes) REFERENCES filmes(id) 
+);
+
