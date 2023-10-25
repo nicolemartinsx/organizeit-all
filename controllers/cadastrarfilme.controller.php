@@ -14,17 +14,18 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $bd = Conexao::get();
 
     try {
-        $query = $bd->prepare("INSERT INTO filmes (titulo, ano, diretor, sinopse, capa) VALUES (:titulo, :ano, :diretor, :sinopse, :capa)");
+        $query = $bd->prepare("INSERT INTO filmes (titulo, ano, diretor, sinopse, genero, estrelas, capa) VALUES (:titulo, :ano, :diretor, :sinopse, :genero, :estrelas, :capa)");
         $query->bindParam(':titulo', $_POST["titulo"]);
         $query->bindParam(':ano', $_POST["ano"]);
         $query->bindParam(':diretor', $_POST["diretor"]);
         $query->bindParam(':sinopse', $_POST["sinopse"]);
+        $query->bindParam(':genero', $_POST["genero"]);
+        $query->bindParam(':estrelas', $_POST["estrelas"]);
         $query->bindParam(':capa', $capa);
         $query->execute();
 
         header("Location: ../index.php?sucesso=Filme cadastrado com sucesso!");
     } catch (PDOException $e) {
-
         header("Location: ?erro=Filme não cadastrado!");
     }
 }

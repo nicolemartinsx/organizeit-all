@@ -386,6 +386,7 @@ textarea {
 
 .sortby {
   display: flex;
+  align-items: center;
   gap: 40px;
 }
 
@@ -409,7 +410,8 @@ textarea {
 }
 
 .containerinput input,
-.containerinput textarea {
+.containerinput textarea,
+.containerinput select {
   width: 300px;
 }
 

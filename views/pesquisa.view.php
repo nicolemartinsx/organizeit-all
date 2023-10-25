@@ -1,6 +1,5 @@
 <?php
 require('../views/header.php');
-require('../models/filmes.model.php');
 
 function opcaoSelecionada($campo, $valor)
 {
@@ -14,23 +13,25 @@ function opcaoSelecionada($campo, $valor)
             <?php
             if (isset($_GET['q'])) {
             ?>
-                resultados da pesquisa por: <?php echo $_GET['q'] ?>
+                resultados da pesquisa por: <?= $_GET['q'] ?>
             <?php
             } else {
             ?>
                 <form class="sortby" method="GET">
                     <select name="genero">
-                        <option value="">genero</option>
-                        <option value="comedia" <?= opcaoSelecionada("genero", "comedia") ?>>comédia</option>
-                        <option value="drama" <?= opcaoSelecionada("genero", "drama") ?>>drama</option>
-                        <option value="acao" <?= opcaoSelecionada("genero", "acao") ?>>ação</option>
+                        <option value="">gênero</option>
+                        <?php foreach ($generos as $genero): ?>
+                            <option value="<?= $genero ?>" <?= opcaoSelecionada("genero", $genero) ?>><?= strtolower($genero) ?></option>
+                        <?php endforeach; ?>
                     </select>
                     <select name="ano">
                         <option value="">ano</option>
-                        <option value="2020" <?= opcaoSelecionada("ano", "2020") ?>>2020</option>
-                        <option value="2021" <?= opcaoSelecionada("ano", "2021") ?>>2021</option>
+                        <?php foreach ($anos as $ano): ?>
+                            <option value="<?= $ano ?>" <?= opcaoSelecionada("ano", $ano) ?>><?= $ano ?></option>
+                        <?php endforeach; ?>
                     </select>
                     <button class="btfiltrar">filtrar</button>
+                    <a href="<?= $_SERVER["PHP_SELF"]; ?>">limpar</a>
                 </form>
             <?php
             }
@@ -40,40 +41,22 @@ function opcaoSelecionada($campo, $valor)
         </div>
 
         <div class="filmes">
-            <?php
-            foreach ($filmes as $filme) {
-                if (isset($_GET['q']) && !empty($_GET['q']) && strpos(strtolower($filme['titulo']), strtolower($_GET['q'])) === false) {
-                    continue;
-                }
-                if (isset($_GET['genero']) && !empty($_GET['genero']) && isset($_GET['ano']) && !empty($_GET['ano'])) {
-                    if ($filme['genero'] != $_GET['genero'] || $filme['ano'] != $_GET['ano']) {
-                        continue;
-                    }
-                } elseif (isset($_GET['genero']) && !empty($_GET['genero']) && $filme['genero'] != $_GET['genero']) {
-                    continue;
-                } elseif (isset($_GET['ano']) && !empty($_GET['ano']) && $filme['ano'] != $_GET['ano']) {
-                    continue;
-                }
-            ?>
-                <a class="filmecontainer" href="../controllers/filme.controller.php?filme=<?= urlencode($filme['titulo']) ?>">
-                    <img src=<?= $base_url . '/' . $filme['capa'] ?> class="capa" alt=<?= $filme['titulo'] ?>>
+            <?php foreach ($filmes as $filme): ?>
+                <a class="filmecontainer" href="../controllers/filme.controller.php?id=<?= urlencode($filme->id) ?>">
+                    <img src="<?= 'data:image/jpeg;base64,' . base64_encode($filme->capa) ?>" class="capa" alt=<?= $filme->titulo ?>>
                     <div class="estrela">
-                        <?php
-                        for ($i = 0; $i < $filme['estrelas']; $i++) {
-                            echo '<img src="../public/imagens/estrela.png" />';
-                        }
-                        for ($i = 0; $i < 5 - $filme['estrelas']; $i++) {
-                            echo '<img src="../public/imagens/estrela_outline.png">';
-                        }
-                        ?>
+                        <?php for ($i = 0; $i < $filme->estrelas; $i++): ?>
+                            <img src="../public/imagens/estrela.png" />
+                        <?php endfor; ?>
+                        <?php for ($i = 0; $i < 5 - $filme->estrelas; $i++): ?>
+                            <img src="../public/imagens/estrela_outline.png">
+                        <?php endfor; ?>
                     </div>
                 </a>
-            <?php
-            }
-            ?>
+            <?php endforeach; ?>
         </div>
     </main>
 </body>
-
+<?php require('../views/footer.php'); ?>
 
 </html>

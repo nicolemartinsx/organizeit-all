@@ -14,11 +14,21 @@
                 <div class="containerinput">
                     <input type="text" name="titulo" placeholder="Titulo" required>
 
-                    <input type="number" name="ano" placeholder="Ano" required>
+                    <input type="number" name="ano" placeholder="Ano" min="1900" max="2100" required>
 
                     <input type="text" name="diretor" placeholder="Diretor" required>
+                    
+                    <input type="number" name="estrelas" placeholder="Estrelas" min="1" max="5" required>
 
-                    <textarea name="sinopse" placeholder="Sinopse" required></textarea>
+                    <select name="genero" required>
+                        <option value="">Gênero</option>
+                        <option value="Comédia">Aventura</option>
+                        <option value="Ação">Ação</option>
+                        <option value="Drama">Drama</option>
+                        <option value="Comédia">Comédia</option>
+                    </select>
+
+                    <textarea name="sinopse" placeholder="Sinopse" rows="4" required></textarea>
                 </div>
 
                 <div class="cadastrocapa">]

@@ -91,7 +91,16 @@ require("header.php");
                     <h1><?= $filme->titulo ?></h1>
                     <h2>lançamento: <?= $filme->ano ?></h2>
                     <h2>direção: <?= $filme->diretor ?></h2>
+                    <h2>gênero: <?= $filme->genero ?></h2>
                     <h3><?= $filme->sinopse ?></h3>
+                    <div class="estrela">
+                        <?php for ($i = 0; $i < $filme->estrelas; $i++): ?>
+                            <img src="../public/imagens/estrela.png" />
+                        <?php endfor; ?>
+                        <?php for ($i = 0; $i < 5 - $filme->estrelas; $i++): ?>
+                            <img src="../public/imagens/estrela_outline.png">
+                        <?php endfor; ?>
+                    </div>
 
                     <?php
                     PesquisarWatchlist($filme->id, $_SESSION['id']);
