@@ -1,4 +1,4 @@
-<?php require('header.php'); ?>
+<?php require('layout/header.php'); ?>
 <main>
     </br>
     <div class="welcome">JUNTE-SE A NOSSA COMUNIDADE!</div>
@@ -66,7 +66,7 @@
 
 </main>
 
-<?php require('footer.php');
+<?php require('layout/footer.php');
 
 if (isset($_GET['mensagem'])) {
     echo "<script> alert('" . $_GET['mensagem'] . "');</script>";

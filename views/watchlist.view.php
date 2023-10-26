@@ -1,4 +1,4 @@
-<?php require('header.php');
+<?php require('../layout/header.php');
 
 //if (isset($_GET["filme"]) && isset($_GET["watchlist"])) {
 //    $watchlist = file_exists("../models/dados/watchlist.txt") ? file("../models/dados/watchlist.txt", FILE_IGNORE_NEW_LINES) : [];

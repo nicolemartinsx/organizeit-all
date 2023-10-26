@@ -1,10 +1,10 @@
 <?php
-require("header.php");
+require("layout/header.php");
 ?>
 <main class="pagfilme">
     <?php
 
-    if (isset($_GET['id'])) {
+    if ($filme) {
         $titulo = $filme->titulo;
         AddWatchlist($_SESSION['id']);
         // Verifica se o título do filme foi passado na URL
@@ -86,13 +86,8 @@ require("header.php");
         <!-- Detalhes do filme -->
         <div class="filmecontainer2">
             <div class="containerfilme">
-                <img class="capafilme" src="<?= 'data:image/jpeg;base64,' . base64_encode($filme->capa) ?>" class="capa" alt=<?= $filme->titulo ?>>
-                <div class="filmedetalhes">
-                    <h1><?= $filme->titulo ?></h1>
-                    <h2>lançamento: <?= $filme->ano ?></h2>
-                    <h2>direção: <?= $filme->diretor ?></h2>
-                    <h2>gênero: <?= $filme->genero ?></h2>
-                    <h3><?= $filme->sinopse ?></h3>
+                <div class="filmecontainer">
+                    <img class="capafilme" src="<?= 'data:image/jpeg;base64,' . base64_encode($filme->capa) ?>" class="capa" alt=<?= $filme->titulo ?>>
                     <div class="estrela">
                         <?php for ($i = 0; $i < $filme->estrelas; $i++): ?>
                             <img src="../public/imagens/estrela.png" />
@@ -101,6 +96,13 @@ require("header.php");
                             <img src="../public/imagens/estrela_outline.png">
                         <?php endfor; ?>
                     </div>
+                </div>
+                <div class="filmedetalhes">
+                    <h1><?= $filme->titulo ?></h1>
+                    <h2>lançamento: <?= $filme->ano ?></h2>
+                    <h2>direção: <?= $filme->diretor ?></h2>
+                    <h2>gênero: <?= $filme->genero ?></h2>
+                    <h3><?= $filme->sinopse ?></h3>
 
                     <?php
                     PesquisarWatchlist($filme->id, $_SESSION['id']);

@@ -1,4 +1,4 @@
-<?php require('header.php');
+<?php require('../layout/header.php');
 require('../models/filme.model.php'); ?>
 
 <body>

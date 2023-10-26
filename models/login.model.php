@@ -4,7 +4,7 @@ session_start();
 
 if (isset($_SESSION["email"])) {
     // Usuario ja esta logado, redirecionar para a pagina principal
-    header("Location: index.php");
+    header("Location: /");
     exit();
 }
 
@@ -20,7 +20,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             $_SESSION["email"] = $email;
             $_SESSION["nome"] = $dados[0];
             $_SESSION['adm'] = $dados[3];
-            header("Location: ../index.php");
+            header("Location: /");
         }
     }
 

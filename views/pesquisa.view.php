@@ -1,5 +1,5 @@
 <?php
-require('views/header.php');
+require('layout/header.php');
 
 function opcaoSelecionada($campo, $valor)
 {
@@ -57,6 +57,6 @@ function opcaoSelecionada($campo, $valor)
         </div>
     </main>
 </body>
-<?php require('views/footer.php'); ?>
+<?php require('layout/footer.php'); ?>
 
 </html>
