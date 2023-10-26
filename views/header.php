@@ -23,20 +23,20 @@ $base_url = "http://projeto-web.test";
 
             <div class="alinhamentoheader">
                 <!-- Campo de pesquisa -->
-                <form class="pesquisa" method="GET" action="<?= $base_url ?>/controllers/pesquisa.controller.php">
+                <form class="pesquisa" method="GET" action="/pesquisa">
                     <input name="q" type="text" class="pesquisa-input" placeholder="Pesquisar...">
                     <button type="submit"><img src="<?= $base_url ?>/public/imagens/pesquisar.png" alt="Lupa" width="25"></button>
                 </form>
 
                 <!-- Botões -->
-                <a class="headerbutton" href="<?= $base_url ?>/index.php">INICIO</a>
-                <a class="headerbutton" href="<?= $base_url ?>/controllers/pesquisa.controller.php">EM ALTA</a>
+                <a class="headerbutton" href="/">INICIO</a>
+                <a class="headerbutton" href="/em-alta">EM ALTA</a>
 
                 <?php
                 session_start();
                 if (isset($_SESSION["adm"]) && $_SESSION['adm'] == '1') {
                 ?>
-                    <a class="headerbutton" href="<?= $base_url ?>/controllers/cadastrarfilme.controller.php">CADASTRAR</a>
+                    <a class="headerbutton" href="/filme/cadastrar">CADASTRAR</a>
                 <?php
                 }
 

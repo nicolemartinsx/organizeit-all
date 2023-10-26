@@ -1,5 +1,5 @@
 <?php
-require('../views/header.php');
+require('views/header.php');
 
 function opcaoSelecionada($campo, $valor)
 {
@@ -31,7 +31,7 @@ function opcaoSelecionada($campo, $valor)
                         <?php endforeach; ?>
                     </select>
                     <button class="btfiltrar">filtrar</button>
-                    <a href="<?= $_SERVER["PHP_SELF"]; ?>">limpar</a>
+                    <a href="/em-alta">limpar</a>
                 </form>
             <?php
             }
@@ -42,7 +42,7 @@ function opcaoSelecionada($campo, $valor)
 
         <div class="filmes">
             <?php foreach ($filmes as $filme): ?>
-                <a class="filmecontainer" href="../controllers/filme.controller.php?id=<?= urlencode($filme->id) ?>">
+                <a class="filmecontainer" href="/filme/<?= $filme->id ?>">
                     <img src="<?= 'data:image/jpeg;base64,' . base64_encode($filme->capa) ?>" class="capa" alt=<?= $filme->titulo ?>>
                     <div class="estrela">
                         <?php for ($i = 0; $i < $filme->estrelas; $i++): ?>
@@ -57,6 +57,6 @@ function opcaoSelecionada($campo, $valor)
         </div>
     </main>
 </body>
-<?php require('../views/footer.php'); ?>
+<?php require('views/footer.php'); ?>
 
 </html>

@@ -13,7 +13,7 @@
         <?php
         foreach ($filmes as $filme) :
         ?>
-            <a href="controllers/filme.controller.php?id=<?= urlencode($filme->id) ?>">
+            <a href="/filme/<?= $filme->id ?>">
                 <img src="<?= 'data:image/jpeg;base64,' . base64_encode($filme->capa) ?>" class="capa" alt=<?= $filme->titulo ?>>
             </a>
         <?php
@@ -22,7 +22,7 @@
     </div>
 
     <div class="bvermais">
-        <a href="controllers/pesquisa.controller.php">ver mais</a>
+        <a href="/em-alta">ver mais</a>
     </div>
 
     <!-- Reviews -->
@@ -68,8 +68,8 @@
 
 <?php require('footer.php');
 
-if (isset($_GET['sucesso'])) {
-    echo "<script> alert('" . $_GET['sucesso'] . "');</script>";
+if (isset($_GET['mensagem'])) {
+    echo "<script> alert('" . $_GET['mensagem'] . "');</script>";
 }
 
 ?>

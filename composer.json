@@ -1,0 +1,9 @@
+{
+    "name": "web/organizeitall",
+    "autoload": {
+        "classmap": ["./"]
+    },
+    "require": {
+        "pecee/simple-router": "5.3.0.5"
+    }
+}

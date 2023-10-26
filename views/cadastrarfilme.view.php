@@ -47,8 +47,8 @@
 
 <?php require 'footer.php';
 
-if (isset($_GET['erro'])) {
-    echo "<script> alert('" . $_GET['erro'] . "');</script>";
+if (isset($_GET['mensagem'])) {
+    echo "<script> alert('" . $_GET['mensagem'] . "');</script>";
 }
 ?>
 

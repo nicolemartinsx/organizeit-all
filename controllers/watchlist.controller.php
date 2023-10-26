@@ -1,6 +1,7 @@
 <?php
 
 require("../views/watchlist.view.php");
+require("../models/filme.model.php");
 require_once("../conexao.php");
 
 class watchlist{
@@ -37,10 +38,6 @@ function MostrarWatchlist (){
             }
              $foo = false;
              return $foo;
-
-        }
-    
-        CLASS Filme{
 
         }
         
