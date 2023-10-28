@@ -1,4 +1,4 @@
-<?php require('../layout/header.php');?>
+<?php require('layout/header.php');?>
 
 <body>
     <main>
@@ -10,13 +10,17 @@
             <a class="ativo" href="<?= $base_url ?>/controllers/perfil.controller.php">watchlist</a>
             <a href="<?= $base_url ?>/controllers/reviews.controller.php">reviews</a>
             <hr>
-        </div>
+            <div class="filmes">
         <?php
-        MostrarWatchlist();
-        
-
+        foreach ($watchlist as $filme) :
         ?>
-        <?php  ?>
+            <a href="/filme/<?= $filme->id ?>">
+                <img src="<?= 'data:image/jpeg;base64,' . base64_encode($filme->capa) ?>" class="capa" alt=<?= $filme->titulo ?>>
+            </a>
+        <?php
+        endforeach;
+        ?>
+    </div>
 
 
 

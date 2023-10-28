@@ -6,7 +6,7 @@ require("layout/header.php");
 
     if ($filme) {
         $titulo = $filme->titulo;
-        AddWatchlist($_SESSION['id']);
+        //AddWatchlist($_SESSION['id']);
         // Verifica se o título do filme foi passado na URL
         // if (isset($_GET["watchlist"])) {
         //     $watchlist = file_exists("../models/dados/watchlist.txt") ? file("../models/dados/watchlist.txt", FILE_IGNORE_NEW_LINES) : [];
@@ -105,7 +105,7 @@ require("layout/header.php");
                     <h3><?= $filme->sinopse ?></h3>
 
                     <?php
-                    PesquisarWatchlist($filme->id, $_SESSION['id']);
+                   PesquisarWatchlist($filme->id,$_SESSION['id']);
                     
                     
 
