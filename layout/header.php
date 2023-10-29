@@ -1,5 +1,5 @@
 <?php
-$base_url = "http://projeto-web.test";
+$base_url = "http://seu-projeto.test/";
 ?>
 <!DOCTYPE html>
 <html lang="pt-br">
@@ -43,11 +43,11 @@ $base_url = "http://projeto-web.test";
                 if (isset($_SESSION["email"])) {
                     // Usuario ja esta logado, redirecionar para a pagina principal 
                 ?>
-                    <a class="headerbutton" href="<?= $base_url ?>/controllers/watchlist.controller.php">WATCHLIST</a>
+                    <a class="headerbutton" href="<?= $base_url ?>watchlist">WATCHLIST</a>
                     <div class="dropdown">
                         <button class="dropbtn"><?php echo $_SESSION["nome"]; ?></button>
                         <div class="dropdown-content">
-                            <a class="droplink" href="<?= $base_url ?>/controllers/perfil.controller.php">Perfil</a>
+                            <a class="droplink" href="<?= $base_url ?>perfil/<?= $_SESSION['id']?>">Perfil</a>
                             <a class="droplink" href="<?= $base_url ?>/controllers/logout.controller.php">Sair</a>
                         </div>
                     </div>
