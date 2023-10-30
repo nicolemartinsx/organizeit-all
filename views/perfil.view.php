@@ -8,7 +8,7 @@
 
         <div class="divisao">
             <a class="ativo" href="<?= $base_url ?>/controllers/perfil.controller.php">watchlist</a>
-            <a href="<?= $base_url ?>/controllers/reviews.controller.php">reviews</a>
+            <a href="<?= $base_url ?>reviews/<?=$_SESSION['id']?>">reviews</a>
             <hr>
             <div class="filmes">
         <?php

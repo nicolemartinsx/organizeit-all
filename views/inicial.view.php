@@ -34,27 +34,28 @@
     <div class="tabelareviews">
 
         <?php
-        require('models/inicial.model.php');
-        foreach ($novas_avaliacoes as $avaliacao) {
+        
+        foreach ($reviews as $avaliacao) {
         ?>
             <div class="review">
-                <img src=<?= "$avaliacao[capa]" ?> class="capa" alt="Filme 1">
+             
+                <img src="<?= 'data:image/jpeg;base64,' . base64_encode($avaliacao->capa) ?>" class="capa" alt=<?= $avaliacao->titulo ?>>
                 <div class="info">
 
-                    <?= $avaliacao['autor'] ?>
-                    <div class="titulo"><?= $avaliacao['titulo'] ?></div>
+                    <?= $avaliacao->nome ?>
+                    <div class="titulo"><?= $avaliacao->titulo?></div>
                     <div class="estrela">
                         <?php
-                        for ($i = 0; $i < $avaliacao['estrelas']; $i++) {
+                        for ($i = 0; $i < $avaliacao->avaliacao; $i++) {
                             echo '<img src="public/imagens/estrela.png" />';
                         }
-                        for ($i = 0; $i < 5 - $avaliacao['estrelas']; $i++) {
+                        for ($i = 0; $i < 5 - $avaliacao->avaliacao; $i++) {
                             echo '<img src="public/imagens/estrela_outline.png">';
                         }
                         ?>
                     </div>
                     <div class="texto"><img src="public/imagens/quote.png" class="icone" />
-                        <?= $avaliacao['descricao'] ?>
+                        <?= $avaliacao->comentario ?>
                     </div>
                 </div>
             </div>

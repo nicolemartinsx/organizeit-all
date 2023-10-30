@@ -29,3 +29,12 @@ CREATE TABLE IF NOT EXISTS `watchlist` (
   FOREIGN KEY (`idFilmes`) REFERENCES `filmes`(`id`)
 );
 
+CREATE TABLE IF NOT EXISTS `reviews` (
+  `idFilmes` int(11) NOT NULL,
+  `idUsuarios` int(11) NOT NULL,
+   `nome` varchar(50) NOT NULL,
+   FOREIGN KEY (`idUsuarios`) REFERENCES `usuarios`(`id`),
+   FOREIGN KEY (`idFilmes`) REFERENCES `filmes`(`id`),
+   `avaliacao` int(2),
+   `comentario` varchar (150)
+);

@@ -43,7 +43,7 @@ $base_url = "http://seu-projeto.test/";
                 if (isset($_SESSION["email"])) {
                     // Usuario ja esta logado, redirecionar para a pagina principal 
                 ?>
-                    <a class="headerbutton" href="<?= $base_url ?> watchlist">WATCHLIST</a>
+                    <a class="headerbutton" href="<?= $base_url ?>watchlist">WATCHLIST</a>
                     <div class="dropdown">
                         <button class="dropbtn"><?php echo $_SESSION["nome"]; ?></button>
                         <div class="dropdown-content">

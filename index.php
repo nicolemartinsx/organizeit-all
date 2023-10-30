@@ -3,6 +3,8 @@ require("vendor/autoload.php");
 
 use Pecee\SimpleRouter\SimpleRouter as Router;
 
+
+
 Router::get('/', 'InicialController@index');
 
 Router::get('/watchlist', 'WatchlistController@MostrarWatchlist');
@@ -16,6 +18,10 @@ Router::get('/filme/{id}', 'FilmeController@index');
 
 Router::get('/filme/{id}/adicionar', 'FilmeController@AddWatchlist');
 Router::get('/filme/{id}/remover', 'FilmeController@RemoverWatchlist');
+
+Router::get('/reviews/{id}','ReviewsController@MostrarReviews');
+
+Router::post('/filme/{id}', 'FilmeController@AdicionarReview');
 
 Router::get('/perfil/{id}', 'PerfilController@MostrarPerfil');
 
