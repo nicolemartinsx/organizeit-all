@@ -110,8 +110,9 @@ require("layout/header.php");
                     <h3><?= $filme->sinopse ?></h3>
 
                     <?php
-                   PesquisarWatchlist($filme->id,$_SESSION['id']);
-                    
+                   if (isset($_SESSION['id'])) {
+                  PesquisarWatchlist($filme->id,$_SESSION['id']);
+                   } 
                     
 
                     echo '</div>';
@@ -138,9 +139,9 @@ require("layout/header.php");
 
 
                     echo '</div>';
-
+                        if(isset($_SESSION['id'])){
                     //Exibe as avaliações dos usuários, se houver alguma
-                     if (PesquisarReviews($filme->id,$_SESSION['id'])==True) {
+                     if (PesquisarReviews($filme->id,$_SESSION['id'])==True ) {
                          echo '<div class=" divisao">reviews<hr></div>';
                          echo '<div class="tabelareviews">';
                          foreach ($reviews as $avaliacao) {
@@ -170,7 +171,7 @@ require("layout/header.php");
                      echo '<div class=" divisao">reviews<hr></div>';
                      echo '<h3>Ainda não há avaliações</h3>';
                  }
-           
+                }
             // } else {
             //     echo "<script> alert('Título do filme não especificado');</script>";
             // }
