@@ -30,6 +30,12 @@
             </form>
         </div>
     </div>
+
+    <?php
+    if (isset($_GET['mensagem'])) {
+        echo "<script> alert('" . $_GET['mensagem'] . "');</script>";
+    }
+    ?>
 </body>
 
 </html>

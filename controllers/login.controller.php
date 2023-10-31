@@ -30,10 +30,10 @@ class LoginController
             $_SESSION["nome"] = $result['nome'];
             $_SESSION['adm'] = $result['adm'];
             $_SESSION['id'] = $result['id'];
-            echo'query foi um sucesso';
+            
             header("Location: /");
          }else{
-            echo 'não funcionou';
+            header("Location: /login?mensagem=Email ou senha incorretos");
          }
          
          

@@ -1,9 +1,5 @@
 <?php
 
-require("models/cadastraruser.model.php");
-
-
-
 class CadastraruserController
 {
     function Cadastraruser()
@@ -35,11 +31,9 @@ class CadastraruserController
         $result = $query->fetch();
 
         if ($result) {
-            echo 'não funcionou';
-            header("Location: /");
+            header("Location: /cadastro?mensagem=Erro ao cadastrar usuário");
         } else {
-
-            header("Location: /");
+            header("Location: /login?mensagem=Usuário cadastrado com sucesso");
         }
     }
 }
