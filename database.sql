@@ -16,6 +16,7 @@ CREATE TABLE IF NOT EXISTS `filmes` (
 
 CREATE TABLE IF NOT EXISTS `usuarios` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
+  `adm` int(11) NOT NULL,
   `nome` varchar(50) NOT NULL,
   `email` varchar(50) NOT NULL,
   `senha` varchar(50) NOT NULL,
@@ -39,3 +40,5 @@ CREATE TABLE IF NOT EXISTS `reviews` (
    `comentario` varchar (150)
 );
 
+
+INSERT INTO usuarios (email, senha , nome, adm) VALUES ("adm@adm", "123123", "adm", 1);
