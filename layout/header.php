@@ -33,14 +33,16 @@ $base_url = "http://seu-projeto.test/";
                 <a class="headerbutton" href="/em-alta">EM ALTA</a>
 
                 <?php
-                session_start();
+                if(isset($_SESSION["id"])==false){
+                    session_start(); 
+                }
                 if (isset($_SESSION["adm"]) && $_SESSION['adm'] == '1') {
                 ?>
                     <a class="headerbutton" href="/filme/cadastrar">CADASTRAR</a>
                 <?php
                 }
 
-                if (isset($_SESSION["email"])) {
+                if (isset($_SESSION["id"])) {
                     // Usuario ja esta logado, redirecionar para a pagina principal 
                 ?>
                     <a class="headerbutton" href="<?= $base_url ?>watchlist">WATCHLIST</a>
@@ -48,13 +50,13 @@ $base_url = "http://seu-projeto.test/";
                         <button class="dropbtn"><?php echo $_SESSION["nome"]; ?></button>
                         <div class="dropdown-content">
                             <a class="droplink" href="<?= $base_url ?>perfil/<?= $_SESSION['id']?>">Perfil</a>
-                            <a class="droplink" href="<?= $base_url ?>/controllers/logout.controller.php">Sair</a>
+                            <a class="droplink" href="<?= $base_url ?>logout">Sair</a>
                         </div>
                     </div>
                 <?php
                 } else {
                 ?>
-                    <a class="headerbutton login" href="<?= $base_url ?>/controllers/login.controller.php">LOGIN</a>
+                    <a class="headerbutton login" href="<?= $base_url ?>login">LOGIN</a>
                 <?php } ?>
             </div>
         </div>

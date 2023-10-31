@@ -27,4 +27,12 @@ Router::get('/perfil/{id}', 'PerfilController@MostrarPerfil');
 
 Router::get('/watchlist', 'WatchlistController@MostrarWatchlist');
 
+Router::get('/login','LoginController@Login');
+Router::post('/login','LoginController@RealizarLogin');
+
+Router::get('/cadastro','CadastraruserController@Cadastraruser');
+Router::post('/cadastro','CadastraruserController@RealizarCadastro');
+
+Router::get('/logout','logout@logout');
+
 Router::start();
