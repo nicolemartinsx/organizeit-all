@@ -1,5 +1,5 @@
 <?php require('layout/header.php');
- ?>
+?>
 
 <body>
     <main>
@@ -9,8 +9,8 @@
         </div>
 
         <div class="divisao">
-            <a href="<?= $base_url ?>perfil/<?=$_SESSION['id']?>">watchlist</a>
-            <a class="ativo" href="<?= $base_url ?>/reviews">reviews</a>
+            <a href="/perfil/<?= $_SESSION['id'] ?>">watchlist</a>
+            <a class="ativo" href="/reviews">reviews</a>
             <hr>
         </div>
 
@@ -20,30 +20,29 @@
                 <?php
 
                 foreach ($reviews as $avaliacao) {
-                   
-                        if ($avaliacao->idUsuarios == $_SESSION['id']) { ?>
-                            <div class="review">
 
-                                <div class="info">
-                                    <div class="titulo"><?=$avaliacao->titulo?></div>
-                                    <div class="estrela">
-                                        <?php
-                                        for ($i = 0; $i < $avaliacao->avaliacao; $i++) {
-                                            echo '<img src="../public/imagens/estrela.png" />';
-                                        }
-                                        for ($i = 0; $i < 5 - $avaliacao->avaliacao; $i++) {
-                                            echo '<img src="../public/imagens/estrela_outline.png">';
-                                        }
-                                        ?>
-                                    </div>
-                                    <div class="texto"><img src="../public/imagens/quote.png" class="icone" />
-                                        <?= $avaliacao->comentario ?>
-                                    </div>
+                    if ($avaliacao->idUsuarios == $_SESSION['id']) { ?>
+                        <div class="review">
+
+                            <div class="info">
+                                <div class="titulo"><?= $avaliacao->titulo ?></div>
+                                <div class="estrela">
+                                    <?php
+                                    for ($i = 0; $i < $avaliacao->avaliacao; $i++) {
+                                        echo '<img src="../public/imagens/estrela.png" />';
+                                    }
+                                    for ($i = 0; $i < 5 - $avaliacao->avaliacao; $i++) {
+                                        echo '<img src="../public/imagens/estrela_outline.png">';
+                                    }
+                                    ?>
+                                </div>
+                                <div class="texto"><img src="../public/imagens/quote.png" class="icone" />
+                                    <?= $avaliacao->comentario ?>
                                 </div>
                             </div>
+                        </div>
                 <?php
-                        }
-                    
+                    }
                 }
                 ?>
             </div>

@@ -1,6 +1,6 @@
-CREATE DATABASE IF NOT EXISTS `projeto-web`
+CREATE DATABASE IF NOT EXISTS `projeto-web`;
 
-USE `projeto-web`
+USE `projeto-web`;
 
 CREATE TABLE IF NOT EXISTS `filmes` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
@@ -12,7 +12,7 @@ CREATE TABLE IF NOT EXISTS `filmes` (
   `estrelas` int(1) NOT NULL,
   `capa` longblob NOT NULL,
   PRIMARY KEY (`id`)
-)
+);
 
 CREATE TABLE IF NOT EXISTS `usuarios` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
@@ -20,7 +20,7 @@ CREATE TABLE IF NOT EXISTS `usuarios` (
   `email` varchar(50) NOT NULL,
   `senha` varchar(50) NOT NULL,
   PRIMARY KEY (`id`)
-)
+);
 
 CREATE TABLE IF NOT EXISTS `watchlist` (
   `idUsuarios` int(11) NOT NULL,
@@ -38,3 +38,4 @@ CREATE TABLE IF NOT EXISTS `reviews` (
    `avaliacao` int(2),
    `comentario` varchar (150)
 );
+
