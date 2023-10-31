@@ -25,10 +25,11 @@ class CadastraruserController
         session_start();
 
         $bd = Conexao::get();
-        $query = $bd->prepare("INSERT INTO usuarios (email, senha , nome) VALUES (:email, :senha, :nome)");
+        $query = $bd->prepare("INSERT INTO usuarios (email, senha , nome, adm) VALUES (:email, :senha, :nome, 0)");
         $query->bindParam(':email', $_POST['email']);
         $query->bindParam(':senha', $_POST['senha']);
         $query->bindParam(':nome', $_POST['nome']);
+
         $query->execute();
 
         $result = $query->fetch();
