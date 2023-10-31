@@ -18,7 +18,7 @@ class InicialController {
         $reviews= $query->fetchAll(PDO::FETCH_CLASS, "reviews");
 
         
-        require("models/inicial.model.php");
+        
         require("views/inicial.view.php");
     }
 }

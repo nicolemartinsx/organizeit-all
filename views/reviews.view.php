@@ -10,7 +10,7 @@
 
         <div class="divisao">
             <a href="/perfil/<?= $_SESSION['id'] ?>">watchlist</a>
-            <a class="ativo" href="/reviews/< ?=$_SESSION['id'] ?>">reviews</a>
+            <a class="ativo" href="/reviews/<?=$_SESSION['id'] ?>">reviews</a>
             <hr>
         </div>
 

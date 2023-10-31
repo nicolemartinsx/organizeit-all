@@ -1,5 +1,5 @@
 <?php
-require("models/inicial.model.php");
+
 
 
 class ReviewsController{

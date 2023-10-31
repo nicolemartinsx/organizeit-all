@@ -7,7 +7,7 @@
         </div>
 
         <div class="divisao">
-            <a class="ativo" href="/perfil/<?=$_SESSION['id']?>>watchlist</a>
+            <a class="ativo" href="/perfil/<?=$_SESSION['id']?>">watchlist</a>
             <a href="/reviews/<?= $_SESSION['id'] ?>">reviews</a>
             <hr>
             <div class="filmes">
