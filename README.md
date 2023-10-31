@@ -1,25 +1,22 @@
 # Projeto-Web
-Celson Bernardo Andrade Caetano Junior Ra: 2257815  
+Celson Bernardo Andrade Caetano Junior ra: 2257815  
+Nicole Mayara Martins ra: 2259630  
+Matheus Scheibel Pereira ra: 2000920  
 
-Nicole Mayara Martins Ra: 2259630
+Funcionalidades faltantes:
+- Edição de reviews.  
+- Conexão com uma Api de filmes (exemplo: Rotten Tomatoes).  
+- Interação entre usuários.  
 
-Matheus Scheibel Pereira Ra: 2000920
+Parte1:  
+Matheus: Login, registro, em alta e sistema de review.  
+Nicole: Design, CSS, sistema e página de watchlist, padrão MVC, página inicial, pesquisa, correção de bugs.  
+Celson: Reviews do perfil logado, watchlist, favoritos(removido na versão atual).  
 
-Funcionalidades faltantes: 
-Funcionalidades dependentes de banco de dados, como: adição de filmes e edição de reviews.
-Conexão com uma Api de filmes (exemplo: Rotten Tomatoes).
-Interação entre usuários na forma de seguidores.
-Criação de lista de filmes. 
-
-
-
-
-
-
-Matheus : Login, registro, em alta e sistema de review.
-Nicole: Design, CSS, sistema e página de watchlist, padrão MVC, página inicial, pesquisa, correção de bugs.
-Celson: Reviews do perfil logado, watchlist, favoritos(removido na versão atual). 
+Parte2:  
+Nicole: Cadastro de filme, pesquisa, em alta, homepage, rotas.  
+Celson: Cadastro de usuário, login, watchlist e reviews, rotas.
 
 
 Método de instalação:
-Com o Apache ativado (no Xampp, por exemplo), adicione o arquivo  “Projeto-Web-main” na pasta “htdocs” e mantenha-o com o nome “Projeto-Web-main”. Entrar em um navegador e na barra de pesquisa colocar “localhost/Projeto-Web-main/”, e apertar enter.
+Com o Apache ativado (no Xampp), adicionar o arquivo “Projeto-Web-main” na pasta “htdocs”. Configurar os hosts do Apache e o modulo de reescrita de url. Instalar o composer e rodar "composer install" no terminal (para instalar o peece/simple-router). Ativar o MySql no Xampp e rodar o script database.sql. Então, no navegador, digitar o host do Apache configurado anteriormente (seu-projeto.test, por exemplo).
