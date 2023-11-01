@@ -15,7 +15,8 @@ Celson: Reviews do perfil logado, watchlist, favoritos(removido na versão atual
 
 Parte2:  
 Nicole: Cadastro de filme, pesquisa, em alta, homepage, rotas.  
-Celson: Cadastro de usuário, login, watchlist e reviews, rotas.
+Celson: Perfil, watchlist e reviews, rotas de Cadastro de usuário, perfil, watchlist e Views.
+Matheus: Insert e Select do login e cadastrarUser, rotas de login.
 
 
 Método de instalação:
