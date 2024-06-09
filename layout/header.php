@@ -5,24 +5,24 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Organize IT.all</title>
-    <link rel="stylesheet" type="text/css" href="/public/css/style.css">
+    <link rel="stylesheet" type="text/css" href="/static/css/style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Signika:wght@300;400;500;600;700&family=Space+Grotesk:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-    <link rel="icon" href="/public/imagens/favicon.ico">
+    <link rel="icon" href="/static/imagens/favicon.ico">
 </head>
 
 <body>
     <header>
         <div class="header-container">
             <!-- Logo -->
-            <img src="/public/imagens/logo.png" alt="Logo da empresa" width="334" height="55">
+            <img src="/static/imagens/logo.png" alt="Logo da empresa" width="334" height="55">
 
             <div class="alinhamentoheader">
                 <!-- Campo de pesquisa -->
                 <form class="pesquisa" method="GET" action="/pesquisa">
                     <input name="q" type="text" class="pesquisa-input" placeholder="Pesquisar...">
-                    <button type="submit"><img src="/public/imagens/pesquisar.png" alt="Lupa" width="25"></button>
+                    <button type="submit"><img src="/static/imagens/pesquisar.png" alt="Lupa" width="25"></button>
                 </form>
 
                 <!-- Botões -->

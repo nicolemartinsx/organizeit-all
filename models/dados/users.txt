@@ -1,5 +1,0 @@
-Matheus,matheus@gmail.com,1212,0
-Celson,celson@gmail.com,senha123,0
-Nicole,nicole@gmail.com,1313,1
-Diego,diego@gmail.com,12345,0
-a,a@gmail.com,1,0

@@ -2,10 +2,12 @@
 
 class Filme
 {
+    private $id;
     private $titulo;
     private $diretor;
     private $estrelas;
     private $genero;
+    private $sinopse;
     private $ano;
     private $capa;
 

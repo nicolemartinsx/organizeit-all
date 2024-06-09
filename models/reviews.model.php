@@ -1,4 +1,4 @@
-<?php 
+<?php
 class reviews
 {
     private $idUsuarios;
@@ -7,7 +7,6 @@ class reviews
     private $genero;
     private $comentario;
     private $nome;
-
 
     public function __get($propriedade)
     {
@@ -19,4 +18,3 @@ class reviews
         return $this->$propriedade = $valor;
     }
 }
-

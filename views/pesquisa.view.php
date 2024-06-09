@@ -46,10 +46,10 @@ function opcaoSelecionada($campo, $valor)
                     <img src="<?= 'data:image/jpeg;base64,' . base64_encode($filme->capa) ?>" class="capa" alt=<?= $filme->titulo ?>>
                     <div class="estrela">
                         <?php for ($i = 0; $i < $filme->estrelas; $i++): ?>
-                            <img src="../public/imagens/estrela.png" />
+                            <img src="../static/imagens/estrela.png" />
                         <?php endfor; ?>
                         <?php for ($i = 0; $i < 5 - $filme->estrelas; $i++): ?>
-                            <img src="../public/imagens/estrela_outline.png">
+                            <img src="../static/imagens/estrela_outline.png">
                         <?php endfor; ?>
                     </div>
                 </a>

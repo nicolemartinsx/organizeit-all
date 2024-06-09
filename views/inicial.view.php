@@ -47,14 +47,14 @@
                     <div class="estrela">
                         <?php
                         for ($i = 0; $i < $avaliacao->avaliacao; $i++) {
-                            echo '<img src="public/imagens/estrela.png" />';
+                            echo '<img src="static/imagens/estrela.png" />';
                         }
                         for ($i = 0; $i < 5 - $avaliacao->avaliacao; $i++) {
-                            echo '<img src="public/imagens/estrela_outline.png">';
+                            echo '<img src="static/imagens/estrela_outline.png">';
                         }
                         ?>
                     </div>
-                    <div class="texto"><img src="public/imagens/quote.png" class="icone" />
+                    <div class="texto"><img src="static/imagens/quote.png" class="icone" />
                         <?= $avaliacao->comentario ?>
                     </div>
                 </div>

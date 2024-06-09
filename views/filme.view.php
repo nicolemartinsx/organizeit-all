@@ -17,10 +17,10 @@ require("layout/header.php");
                 <img class="capafilme" src="<?= 'data:image/jpeg;base64,' . base64_encode($filme->capa) ?>" class="capa" alt=<?= $filme->titulo ?>>
                 <div class="estrela">
                     <?php for ($i = 0; $i < $filme->estrelas; $i++) : ?>
-                        <img src="../public/imagens/estrela.png" />
+                        <img src="../static/imagens/estrela.png" />
                     <?php endfor; ?>
                     <?php for ($i = 0; $i < 5 - $filme->estrelas; $i++) : ?>
-                        <img src="../public/imagens/estrela_outline.png">
+                        <img src="../static/imagens/estrela_outline.png">
                     <?php endfor; ?>
                 </div>
             </div>
@@ -74,14 +74,14 @@ require("layout/header.php");
                                     <div class="estrela">
                                         <?php
                                         for ($i = 0; $i < $avaliacao->avaliacao; $i++) {
-                                            echo '<img src="../public/imagens/estrela.png" />';
+                                            echo '<img src="../static/imagens/estrela.png" />';
                                         }
                                         for ($i = 0; $i < 5 -  $avaliacao->avaliacao; $i++) {
-                                            echo '<img src="../public/imagens/estrela_outline.png">';
+                                            echo '<img src="../static/imagens/estrela_outline.png">';
                                         }
                                         ?>
                                     </div>
-                                    <div class="texto"><img src="../public/imagens/quote.png" class="icone" />
+                                    <div class="texto"><img src="../static/imagens/quote.png" class="icone" />
                                         <?= $avaliacao->comentario ?>
                                     </div>
                                 </div>

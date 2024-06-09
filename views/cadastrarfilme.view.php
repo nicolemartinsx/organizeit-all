@@ -32,7 +32,7 @@
                 </div>
 
                 <div class="cadastrocapa">]
-                    <img class="capa" alt="capa" src="../public/imagens/placeholdercapa.png" />
+                    <img class="capa" alt="capa" src="../static/imagens/placeholdercapa.png" />
                     <input name="capa" type="file" required />
                     <button id="removerimg" type="button" class="btfiltrar">remover imagem</button>
                 </div>
@@ -58,7 +58,7 @@ if (isset($_GET['mensagem'])) {
     const removerimg = document.querySelector('#removerimg');
 
     removerimg.addEventListener('click', function(e) {
-        preview.src = '../public/imagens/placeholdercapa.png';
+        preview.src = '../static/imagens/placeholdercapa.png';
         input.value = "";
     });
 

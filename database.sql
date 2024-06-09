@@ -1,4 +1,5 @@
-CREATE DATABASE IF NOT EXISTS `projeto-web`;
+DROP DATABASE IF EXISTS `projeto-web`;
+CREATE DATABASE `projeto-web`;
 
 USE `projeto-web`;
 
