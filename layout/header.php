@@ -16,7 +16,7 @@
     <header>
         <div class="header-container">
             <!-- Logo -->
-            <img src="/static/imagens/logo.png" alt="Logo da empresa" width="334" height="55">
+            <a href="/"><img src="/static/imagens/logo.png" alt="Logo da empresa" width="334" height="55"></a>
 
             <div class="alinhamentoheader">
                 <!-- Campo de pesquisa -->
@@ -27,7 +27,7 @@
 
                 <!-- Botões -->
                 <a class="headerbutton" href="/">INICIO</a>
-                <a class="headerbutton" href="/em-alta">EM ALTA</a>
+                <a class="headerbutton" href="/em-alta">FILMES</a>
 
                 <?php
                 if (isset($_SESSION["id"]) == false) {
@@ -35,14 +35,13 @@
                 }
                 if (isset($_SESSION["adm"]) && $_SESSION['adm'] == '1') {
                 ?>
-                    <a class="headerbutton" href="/filme/cadastrar">CADASTRAR</a>
+                    <a class="headerbutton" href="/filme/cadastrar">CADASTRAR FILME</a>
                 <?php
                 }
 
                 if (isset($_SESSION["id"])) {
                     // Usuario ja esta logado, redirecionar para a pagina principal 
                 ?>
-                    <a class="headerbutton" href="/watchlist">WATCHLIST</a>
                     <div class="dropdown">
                         <button class="dropbtn"><?php echo $_SESSION["nome"]; ?></button>
                         <div class="dropdown-content">
@@ -53,7 +52,7 @@
                 <?php
                 } else {
                 ?>
-                    <a class="headerbutton login" href="login">LOGIN</a>
+                    <a class="headerbutton login" href="/login">ENTRE/CADASTRE-SE</a>
                 <?php } ?>
             </div>
         </div>

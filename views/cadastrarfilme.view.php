@@ -4,6 +4,10 @@
 
     <body>
         <div class="divisao">
+            <a href="/">inicio</a>
+            >
+            <a href="/em-alta">filmes</a>
+            >
             cadastrar filme
             <hr>
         </div>
@@ -17,23 +21,27 @@
                     <input type="number" name="ano" placeholder="Ano" min="1900" max="2100" required>
 
                     <input type="text" name="diretor" placeholder="Diretor" required>
-                    
+
                     <input type="number" name="estrelas" placeholder="Estrelas" min="1" max="5" required>
 
-                    <select name="genero" required>
-                        <option value="">Gênero</option>
-                        <option value="Comédia">Aventura</option>
-                        <option value="Ação">Ação</option>
-                        <option value="Drama">Drama</option>
-                        <option value="Comédia">Comédia</option>
-                    </select>
+                    <div>
+                        <label for="selectGenero">gênero:</label>
+                        <select id="selectGenero" name="genero" required>
+                            <option value="">Selecione</option>
+                            <option value="Comédia">Aventura</option>
+                            <option value="Ação">Ação</option>
+                            <option value="Drama">Drama</option>
+                            <option value="Comédia">Comédia</option>
+                        </select>
+                    </div>
 
                     <textarea name="sinopse" placeholder="Sinopse" rows="4" required></textarea>
                 </div>
 
-                <div class="cadastrocapa">]
+                <div class="cadastrocapa">
                     <img class="capa" alt="capa" src="../static/imagens/placeholdercapa.png" />
-                    <input name="capa" type="file" required />
+                    <label for="capa">Capa:</label>
+                    <input id="capa" name="capa" type="file" required />
                     <button id="removerimg" type="button" class="btfiltrar">remover imagem</button>
                 </div>
 

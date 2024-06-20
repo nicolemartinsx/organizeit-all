@@ -13,7 +13,7 @@
 
 <body class="cadastro">
     <div>
-        <img class="logo" src="../static/imagens/logo.png">
+        <img alt="Logo" class="logo" src="../static/imagens/logo.png">
 
         <!-- Formulario de cadastro -->
         <div class="container">

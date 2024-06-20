@@ -1,8 +1,15 @@
 <?php
 class reviews
 {
+    private $id;
+    private $titulo;
+    private $ano;
+    private $diretor;
+    private $sinopse;
+    private $estrelas;
+    private $capa;
     private $idUsuarios;
-    private $idFIlmes;
+    private $idFilmes;
     private $avaliacao;
     private $genero;
     private $comentario;

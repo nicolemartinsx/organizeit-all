@@ -14,7 +14,7 @@
 <body>
     <div class="container">
 
-        <img class="logologin" src="../static/imagens/logologin.png">
+        <img alt="Logo" class="logologin" src="../static/imagens/logologin.png">
         <div class="campos">
             <h1>iniciar sessão</h1>
 
@@ -25,7 +25,7 @@
                 <div class="botaologin">
                     <input type="password" name="senha" placeholder="Senha" required>
 
-                    <button type="submit"><img src="../static/imagens/entrarbutton.png"></button>
+                    <button type="submit"><img alt="Entrar" src="../static/imagens/entrarbutton.png"></button>
                 </div>
             </form>
 

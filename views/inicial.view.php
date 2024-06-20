@@ -1,11 +1,11 @@
 <?php require('layout/header.php'); ?>
 <main>
     </br>
-    <div class="welcome">JUNTE-SE A NOSSA COMUNIDADE!</div>
+    <div class="welcome">Mantenha seus filmes assistidos atualizados e acompanhe seus amigos!</div>
 
     <!-- Em alta -->
     <div class="divisao">
-        recentes
+        adicionados recentemente
         <hr>
     </div>
 
@@ -27,34 +27,34 @@
 
     <!-- Reviews -->
     <div class=" divisao">
-        novas reviews
+        novas resenhas
         <hr>
     </div>
 
     <div class="tabelareviews">
 
         <?php
-        
+
         foreach ($reviews as $avaliacao) {
         ?>
             <div class="review">
-             
+
                 <img src="<?= 'data:image/jpeg;base64,' . base64_encode($avaliacao->capa) ?>" class="capa" alt=<?= $avaliacao->titulo ?>>
                 <div class="info">
 
                     <?= $avaliacao->nome ?>
-                    <div class="titulo"><?= $avaliacao->titulo?></div>
+                    <div class="titulo"><?= $avaliacao->titulo ?></div>
                     <div class="estrela">
                         <?php
                         for ($i = 0; $i < $avaliacao->avaliacao; $i++) {
-                            echo '<img src="static/imagens/estrela.png" />';
+                            echo '<img alt="" src="static/imagens/estrela.png" />';
                         }
                         for ($i = 0; $i < 5 - $avaliacao->avaliacao; $i++) {
-                            echo '<img src="static/imagens/estrela_outline.png">';
+                            echo '<img alt="" src="static/imagens/estrela_outline.png">';
                         }
                         ?>
                     </div>
-                    <div class="texto"><img src="static/imagens/quote.png" class="icone" />
+                    <div class="texto"><img alt="" src="static/imagens/quote.png" class="icone" />
                         <?= $avaliacao->comentario ?>
                     </div>
                 </div>

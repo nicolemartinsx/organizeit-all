@@ -1,8 +1,8 @@
 <footer>
+    <a href="/mapa">MAPA DO SITE</a>
     <div>
-        <a>Sobre nós </a>
-        <a>Contato </a>
-        <a>Termos de uso</a>
+        <span>OrganizeIt All LTDA</span>
+        <span>Email: organize-it-all@gmail.com</span>
+        <span>Telefone: (42) 99802-3655</span>
     </div>
-    <span>Criado por Celson, Matheus e Nicole <br> 2023</span>
 </footer>

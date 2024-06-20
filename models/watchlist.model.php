@@ -2,12 +2,16 @@
 
 class Watchlist
 {
+    private $id;
     private $titulo;
     private $diretor;
     private $estrelas;
     private $genero;
     private $ano;
     private $capa;
+    private $idUsuarios;
+    private $idFilmes;
+    private $sinopse;
 
     public function __get($propriedade)
     {
@@ -19,5 +23,3 @@ class Watchlist
         return $this->$propriedade = $valor;
     }
 }
-
-
